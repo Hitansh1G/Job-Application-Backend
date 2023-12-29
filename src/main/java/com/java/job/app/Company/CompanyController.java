@@ -28,4 +28,10 @@ public class CompanyController {
             return new ResponseEntity<>("Company has been updated successfully", HttpStatus.OK);
         return new ResponseEntity<>("updation failed",HttpStatus.NOT_FOUND);
     }
+
+    @PostMapping
+    public ResponseEntity<String>addCompany(@RequestBody Company company){
+        companyService.createCompany(company);
+        return new ResponseEntity<>("company added successfully",HttpStatus.CREATED);
+    }
 }
