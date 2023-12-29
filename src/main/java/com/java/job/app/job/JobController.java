@@ -17,6 +17,7 @@ public class JobController {
         this.jobService = jobService;
     }
 
+
     @GetMapping("/jobs")
     public List<Job> FindAll(){
         return jobService.findALL();
