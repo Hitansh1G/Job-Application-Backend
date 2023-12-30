@@ -1,5 +1,6 @@
 package com.java.job.app.Company;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.java.job.app.job.Job;
 import jakarta.persistence.*;
 
@@ -13,7 +14,8 @@ public class Company {
     private String name;
     private String description;
 
-    @OneToMany
+    @OneToMany(mappedBy = "company")
+    @JsonManagedReference
     private List<Job> job;
 
 //    private List<Revies>reviews;
