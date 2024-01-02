@@ -22,7 +22,7 @@ public class JobController {
         return ResponseEntity.ok(jobService.findALL());
     }
 
-    @PostMapping(path = "/jobs")
+    @PostMapping(path = "/jobs", consumes = "application/json")
     public ResponseEntity<String> createJob(@RequestBody Job job){
         jobService.createJob(job);
 

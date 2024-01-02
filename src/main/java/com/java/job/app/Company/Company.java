@@ -23,6 +23,14 @@ public class Company {
     @JsonManagedReference
     private List<Review>reviews;
 
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
     public Company(Long id, String name, String description, List<Job> job) {
         this.id = id;
         this.name = name;

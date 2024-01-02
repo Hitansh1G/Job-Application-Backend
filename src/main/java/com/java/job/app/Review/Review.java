@@ -1,5 +1,6 @@
 package com.java.job.app.Review;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.java.job.app.Company.Company;
 import jakarta.persistence.*;
@@ -14,7 +15,7 @@ public class Review {
     private double rating;
 
     @ManyToOne
-    @JsonIgnore
+    @JsonBackReference
     private Company company;
 
     public Review(Company company) {

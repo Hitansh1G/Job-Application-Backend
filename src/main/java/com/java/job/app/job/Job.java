@@ -2,6 +2,7 @@ package com.java.job.app.job;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.java.job.app.Company.Company;
 import jakarta.persistence.*;
 
